@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="myH3">hello jquery</h3> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(function(){
+            // js
+            const myH3Js = document.getElementById('myH3') ;
+            // jq 的 mathod 只能用來操作JQ的物件 jq object
+
+            // 綁定物件 = $('#myH3') id。
+            const myH3Jq = $('#myH3');
+            // 輸出，console.log(顯示是否有綁定成功。)
+            console.log('myH3Js',myH3Js);
+            // 輸出
+            console.log('myH3Jq',myH3Jq);
+           // $('#myH3')
+            // $('#myH3').text('12345');
+            // $('#myH3').css('color','red');
+            // myH3Js.css('color','red');;
+            // 改變css color，改成紅色。
+            myH3Jq.css('color','red');
+
+            
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script> 
+// 宣告綁住一個button。
+$(document).ready(function(){
+  $("#start").click(function(){
+    // 先將這個div的長度+到300，並且用1.5秒
+    $("div").animate({height: 300}, 1500);
+    // 先將這個div的寬度+到300，並且用1.5秒
+    $("div").animate({width: 300}, 1500);
+    // 先將這個div的高度-到100，並且用1.5秒
+    $("div").animate({height: 100}, 1500);
+    // 先將這個div的寬度-到100，並且用1.5秒
+    $("div").animate({width: 100}, 1500);
+  });
+  // 當按下#stop id的時候。
+  $("#stop").click(function(){
+    // 暫停所有動作。
+    $("div").clearQueue();
+  });
+});
+</script> 
+</head>
+<body>
+
+<button id="start">Start Animation</button>
+<button id="stop">Stop Animation</button>
+<br><br>
+
+<div style="background:red;height:100px;width:100px;"></div>
+ 
+</body>
+</html>
