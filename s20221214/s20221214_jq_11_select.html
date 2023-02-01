@@ -63,9 +63,12 @@
             $('.box1').click(function () {
                 // 確定box1功能。
                 console.log('box1 ok');
+                // 取出select內的val值，並且用數字儲存，number，就是宣告為數字。
                 let getSelectVal = Number($('select').val());
                 console.log('getSelectVal', getSelectVal);
+                // typeof，為看資料資料型態。
                 console.log('getSelectVal typeof', typeof (getSelectVal));
+                // switch選擇器當case為1時執行什麼動作，2時執行什麼動作，3時執行什麼動做。
                 switch (getSelectVal) {
                     case 1:
                         box2.toggle();
