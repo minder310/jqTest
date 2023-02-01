@@ -71,10 +71,12 @@
                 $(this).css('background-color', 'red');
             });
 
-            //blur 離開
+            //翻譯blur，在失去焦點時，執行動做，(this).css改變css屬性，將背景顏色改為無色。
             $('input').blur(function () {
+                // 將沒有選取的input，改為無色。
                  $(this).css('background-color', '');
-                 $(input).odd().css('background-color','green')
+                //  並將odd()偶數表格，改變css屬性，背景顏色，改為綠色。
+                 $('input').odd().css('background-color','green')
             });
 
 

@@ -35,13 +35,18 @@
 
         $(function () {
             // 輸入預設的value直。
-
             $('input').val('55688');
+            
             // 取值 get getter
             let h3Text = $('h3').text();
+            
             // 設定值 賦值 set setter
-            $('h3').text('change h3 text');
+            // 滑入時改變字體，並更改內容。
+            $('h3').mouseleave(function(){
+                $(this).text('change h3 text');
+            })
 
+            // 綁定div，並且用html方式，輸入<hr>一條橫線。哈哈。
             $('div').html('<hr>');
             //    $('div').text('<hr>');
 
@@ -51,11 +56,15 @@
             // 這邊是告入你，就算jq導入改變文字，也並不會影響到一開始取用的值。
             console.log('h3Text', h3Text);
 
+            // change，當內容被改變時，執行function內容。
             $('input').change(function () {
-                // 當輸入文字時chang會改變。並且記錄新的val值。
+                // 改變文字顏色為紅色。
                 $(this).css('color', 'red');
+                // 將新的值塞入，宣告的變數中。
                 let getInputValue = $(this).val();
+                // 在console.log，顯示新的值是什麼。
                 console.log('getInputValue', getInputValue);
+                // 此段為網頁其實默默地可以記錄你沒有按下送出的值，並且記錄，請小心。
             });
 
             // 練習 select

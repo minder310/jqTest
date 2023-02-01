@@ -23,16 +23,19 @@
     <button type="button" id="showBtn">show</button>
     <button type="button" id="toggleBtn">toggle</button>
 
+    <!-- 帶入jq -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
         integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <!-- 書寫js的地方。 -->
     <script>
 
 
-
+        // 書寫jq的地方。
         $(function () {
+            // 寫一個function叫做sayhello。
             function sayHello() {
+                // 跳出警告視窗，並且顯示('hello jquery')。
                 alert('hello jquery');
             }
 
@@ -40,15 +43,19 @@
             $('#hideBtn').click(function () {
                 // 蔣所有的hide收起來，用5秒。)
                 $('p').hide(5000, function () {
+                    // 在consol.log，計算次數。
                     console.log('itemNum',itemNum);
+                    // itemNum+1
                     itemNum++;
                     // sayHello();
                     // alert('123');
                 });
             })
             // event on('event',callback);
+            // 綁定id(#showbtn).on(點擊時，觸發function())
             $('#showBtn').on('click',function () 
             {
+                // 所有p元素，用五秒的時間出現。
                 $('p').show(5000,function(){
                     
                 });

@@ -33,17 +33,23 @@
 
         $(function () {
             // 綁定
+            // const:為宣告無法改變的值。
+            // 綁定的優點是下面可以用綁定宣告取代。
             const allP = $('p');
 
             // 淡入 淡出
+            // 當點擊時，淡入allp。
             $('#fadeInBtn').click(function () {
-                allP.fadeIn();
+                allP.fadeIn(5000);
             })
             // event on('event',callback);
+            // 當點擊時，淡出淡出。
             $('#fadeOutBtn').on('click',function () {
                 allP.fadeOut();
             })
+            // 當點擊時，淡出或是淡入。
             $('#fadeToggleBtn').click(function () {
+                // toggle淡入淡出，的意思。
                 allP.fadeToggle();
             })
 

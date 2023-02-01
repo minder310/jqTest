@@ -53,13 +53,15 @@
             // 點擊box1，啟動function，
             $('.box1').click(function () {
                 // $('.box2').slideUp();
+                // slide滑動，滑入滑出。
                 $('.box2').slideToggle();
             });
             // jquery methon chain
             $('#slideUpBtn').click(function () {
-                // 宣告，按下#slideupbtn，
+                // 宣告，按下#slideupbtn，字體顏色改為紅色，並且向上滑動2秒，滑下2秒。
                 $('.box2').css("color", "red").slideUp(2000).slideDown(2000);
             })
+            // 點擊slideDownbtn(id時)，向下滑動，並且在結束後，跳出alert視窗，並且顯示收費10000。
             $('#slideDownBtn').click(function () {
                 $('.box2').slideDown(5000,function(){
                     alert('收費10000');
