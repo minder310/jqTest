@@ -70,14 +70,18 @@
                 console.log('getSelectVal typeof', typeof (getSelectVal));
                 // switch選擇器當case為1時執行什麼動作，2時執行什麼動作，3時執行什麼動做。
                 switch (getSelectVal) {
+                    // 要是判斷為1，隱藏或顯示，並改變內容text檔內的文字。
                     case 1:
                         box2.toggle();
                         box2.text('hello hide');
                         break;
+
+                    // 要是判斷為2，fadetoggle()漸變顯示，並改變text內容('hello fade')。
                     case 2:
                         box2.fadeToggle(2000);
                         box2.text('hello fade');
                         break;
+                    // 要是判斷為3，slideToggle()滑入顯示，花兩秒，並改變文字內容。
                     case 3:
                         box2.slideToggle(2000);
                         box2.text('hello slide');

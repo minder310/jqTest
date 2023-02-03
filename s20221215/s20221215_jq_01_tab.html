@@ -90,7 +90,7 @@
 
         $(function () {
 
-            // 綁定
+            // 綁定區
             const tab1 = $('#tab1');
             const tab2 = $('#tab2');
             const tab3 = $('#tab3');
@@ -99,24 +99,37 @@
             const allP = $('.box2>p');
             console.log('allP',allP);
 
+            // 當點擊了tab1執行以下程式。
             tab1.click(function () {
                 // box2.text('11111');
+                // 顯示box2的格子。
                 box2.show();
+                //  隱藏'box>p'下的p資料。
                 allP.hide();
+                // 這個this，是指tab1，顏色是黑色。
                 $(this).css('color','black');
+                // 宣告this這個格子。滑下allp第0個，請注意這是連續動作，所以不用重新宣告。
                 allP.eq(0).slideDown(10000,function(){
                     // alert('123');
+                    // 這個this是指allP.eq(0)，字體改成紅色。
                     $(this).css('color','red');
-                }).slideUp(10000,function(){
+                })//注意下面的點指的是第二個動作，所以不需要再宣告this。他會是連續動作。
+                .slideUp(10000,function(){
                     $(this).css('color','black');
                 });
             });
-
+            // 點擊tab2時，執行以下動作。
             tab2.click(function () {
                 // box2.text('2222');
+                // 請記得程式顯示是由上往下。
+                // 顯示box2。
                 box2.show();
+                // 隱藏，所有的allP。
                 allP.hide();
-                allP.eq(1).slideDown();
+                // 顯示allP.eq(1)，滑下顯示。
+                allP.eq(1).slideDown().slideUp();
+                // box2滑上並用10秒鐘。
+                box2.slideUp(10000);
             });
 
             tab3.click(function () {
