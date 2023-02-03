@@ -11,7 +11,6 @@
             color: red;
         }
 
-
         .green {
             color: green;
         }
@@ -70,27 +69,39 @@
             const myBtn = $('button');
 
             //array
+            // 宣告一個陣列，並且塞入[紅色，黃色，綠色，藍色]
             const colorArr = ['red', 'yellow', 'green', 'blue'];
 
+            
             console.log('colorArr', colorArr);
+            // 顯示陣列中012的內容。 
             console.log('colorArr[0]', colorArr[0]);
             console.log('colorArr[1]', colorArr[1]);
             console.log('colorArr[2]', colorArr[2]);
 
+            // 更改text的內容。
             pJs.innerText = 'Change Js';
             pJq.text('change jq');
 
+
             let num = 0;
+            // 按下myBtn後會啟動什麼動作。
             myBtn.click(function () {
+
                 console.log('num', num);
                 console.log('num${colorArr[num]}', colorArr[num]);
                 // num++;
                 // let checkNum = num % colorArr.length;
                 // console.log('checkNum', checkNum);
                 // $('p').attr('class', colorArr[checkNum]);
-
+                
+                // 這邊的宣告等於是一個1~4的亂數生成。
+                // 宣告一個變數，randomNum=(Math.floor()取最大整數)(Math.random()亂數生成小數點)*(陣列.lenght(長度)-1)
                 let randomNum = Math.floor(Math.random() * (colorArr.length - 1));
+                console.log("測試Math.random",Math.random());
+                // 
                 console.log('randomNum', randomNum);
+                // 更改p數值，的class，並書入陣列中的數值。
                 $('p').attr('class', colorArr[randomNum]);
 
                 // switch (num) {

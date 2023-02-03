@@ -29,15 +29,21 @@
         $(function () {
             // 綁定
             console.log('allP');
+            // allp綁定，所有p元素。
             const allP = $('p');
+            // 更改allp.eq(0)內的data(s55688，改成"hello word")
             allP.eq(0).data('s55688', "Hello World");
+            // 顯示出所有p數值。數值。
             console.log('allP', allP);
+
+            // 這邊foreach 使用方式，$.each("陣列名稱"，function(key,value))
             $.each(allP, function (key, value) {
-                console.log(key);
-                console.log(value);
-                console.log(this);
-                console.log($(this));
-                console.log($(value));
+                
+                console.log("uu",key);
+                console.log("uu",value);
+                console.log("uu",this);
+                console.log("uu",$(this));
+                console.log("uu",$(value));
             });
             console.log('allP type2', allP);
             allP.each(function (key, value) {

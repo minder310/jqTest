@@ -61,27 +61,37 @@
             // val()
 
             // js
+
             const pJs = document.getElementById('pJs');
             // jq
+            // 綁定id pJq並且。
             const pJq = $('#pJq');
-
+            // 綁定button案件。
             const myBtn = $('button');
 
+            // js原生宣告方式更改，文字內容。
             pJs.innerText = 'Change Js';
+            // jq方式更改文字內容。
             pJq.text('change jq');
 
+            // 設定一個變數，並且true，會可以拿來判斷是什麼顏色。
             let isGreen = true; //flag true true  // 0 1 2
+
+            // 按下按鍵後會執行的工作。
             myBtn.click(function(){
                 // red => green
                 // green => red
                 console.log('isGreen',isGreen);
+                // 要是isGreen是真實，執行p，class 改成紅色。
                 if(isGreen){
                     $('p').attr('class','red');
                     isGreen = false;
+                // 要是不是true的話，class，更改成green。
                 }else{
                     $('p').attr('class','green');
                     isGreen = true;
                 }
+                // 顯示現在isGreen的狀態。
                 console.log('isGreen change',isGreen);
                 //attribute
             });
